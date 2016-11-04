@@ -1,0 +1,31 @@
+<div class='customer'>
+  <p class='actions'>
+    <%= link_to 'Edit', edit_customer_path(customer) %>
+    <%= link_to 'Destroy', customer, method: :delete, data: { confirm: 'Are you sure?' } %>
+  </p>
+
+  <p>
+    <strong>Full name:</strong>
+    <%= customer.full_name %>
+  </p>
+
+  <p>
+    <strong>Phone number:</strong>
+    <%= customer.phone_number %>
+  </p>
+
+  <p>
+    <strong>Email:</strong>
+    <%= customer.email %>
+  </p>
+
+  <p>
+    <strong>Image:</strong>
+    <%= customer.image %>
+  </p>
+
+  <p>
+    <strong>Notes:</strong>
+    <%= customer.notes %>
+  </p>
+</div>
