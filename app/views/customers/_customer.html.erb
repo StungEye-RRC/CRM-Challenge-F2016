@@ -1,31 +1,34 @@
-<div class='customer'>
-  <p class='actions'>
+<div class="card customer">
+  <div class="card-block">
+    <h4 class="card-title">
+      <%= customer.full_name %>
+    </h4>
+  </div>
+
+  <%= image_tag customer.image %>
+
+  <div class="card-block">
+    <p class="card-text">
+      <strong>Phone number:</strong>
+      <%= customer.phone_number %>
+    </p>
+
+    <p class="card-text">
+      <strong>Email:</strong>
+      <%= customer.email %>
+    </p>
+
+    <p class="card-text">
+      <strong>Image:</strong>
+    </p>
+
+    <p class="card-text">
+      <strong>Notes:</strong>
+      <%= customer.notes %>
+    </p>
+
     <%= link_to 'Edit', edit_customer_path(customer) %>
     <%= link_to 'Destroy', customer, method: :delete, data: { confirm: 'Are you sure?' } %>
-  </p>
+  </div>
 
-  <p>
-    <strong>Full name:</strong>
-    <%= customer.full_name %>
-  </p>
-
-  <p>
-    <strong>Phone number:</strong>
-    <%= customer.phone_number %>
-  </p>
-
-  <p>
-    <strong>Email:</strong>
-    <%= customer.email %>
-  </p>
-
-  <p>
-    <strong>Image:</strong>
-    <%= customer.image %>
-  </p>
-
-  <p>
-    <strong>Notes:</strong>
-    <%= customer.notes %>
-  </p>
 </div>
