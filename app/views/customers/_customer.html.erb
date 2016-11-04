@@ -5,11 +5,11 @@
     </h4>
   </div>
 
-  <%= image_tag customer.image %>
+  <%= image_tag customer.image, class: 'card-img-top img-fluid mx-auto d-block' %>
 
   <div class="card-block">
     <p class="card-text">
-      <strong>Phone number:</strong>
+      <strong>Phone:</strong>
       <%= customer.phone_number %>
     </p>
 
@@ -18,16 +18,13 @@
       <%= customer.email %>
     </p>
 
-    <p class="card-text">
-      <strong>Image:</strong>
-    </p>
-
-    <p class="card-text">
-      <strong>Notes:</strong>
+    <p class="card-text notes">
       <%= customer.notes %>
     </p>
+  </div>
 
-    <%= link_to 'Edit', edit_customer_path(customer) %>
+  <div class="card-footer">
+    <%= link_to 'Edit', edit_customer_path(customer) %> -
     <%= link_to 'Destroy', customer, method: :delete, data: { confirm: 'Are you sure?' } %>
   </div>
 
