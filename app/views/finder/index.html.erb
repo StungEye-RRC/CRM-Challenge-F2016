@@ -1,2 +1,9 @@
-<h1>Finder#index</h1>
-<p>Find me in app/views/finder/index.html.erb</p>
+<h1>All Customers</h1>
+
+<!--
+  Long form call requires a path to the partial:
+    render partial: 'customers/customer', collection: @customers
+
+  Short form does not:
+-->
+<%= render @customers %>
